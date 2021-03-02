@@ -35,3 +35,8 @@ Import the project in any IDE's and run BaseRunner.java in order to invoke the f
 ## Reporting
 
 Default reporting is generated under build target location
+
+
+## Improvements
+
+Extent reports to be integrated for better analysis
