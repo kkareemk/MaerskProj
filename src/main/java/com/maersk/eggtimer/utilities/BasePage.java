@@ -39,7 +39,7 @@ public class BasePage {
     }
 
     public static void tearDown(){
-            driver.close();
+            driver.quit();
     }
 
 }

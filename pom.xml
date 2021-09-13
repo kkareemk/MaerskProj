@@ -37,12 +37,29 @@
       <artifactId>cucumber-junit</artifactId>
       <version>6.8.2</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>3.141.59</version>
     </dependency>
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>3.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vimalselvam</groupId>
+      <artifactId>cucumber-extentsreport</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>net.masterthought</groupId>
+      <artifactId>cucumber-reporting</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -56,6 +73,7 @@
         </plugin>
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
