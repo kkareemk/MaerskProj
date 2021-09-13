@@ -2,6 +2,7 @@ package com.maersk.eggtimer.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.FileNotFoundException;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +23,11 @@ public class BasePage {
             driver= new FirefoxDriver();
         }else if(browser.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
-            driver= new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox"); //Bypass OS security model
+            options.addArguments("--start-maximized");
+            options.addArguments("--disable-dev-shm-usage");
+            driver= new ChromeDriver(options);
         }else{
             System.out.println("This is not valid browser, please enter valid browser names - firefox or chrome");
         }
