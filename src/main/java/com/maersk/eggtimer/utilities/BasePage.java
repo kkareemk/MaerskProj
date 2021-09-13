@@ -1,5 +1,6 @@
 package com.maersk.eggtimer.utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,10 +20,10 @@ public class BasePage {
             e.printStackTrace();
         }
         if(browser.equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver","src/test/resources/drivers/geckodriver.exe");
+            WebDriverManager.firefoxdriver().setup();
             driver= new FirefoxDriver();
         }else if(browser.equalsIgnoreCase("chrome")){
-            System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--no-sandbox"); //Bypass OS security model
             options.addArguments("--start-maximized");
