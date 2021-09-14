@@ -28,7 +28,6 @@ public class BasePage {
             options.addArguments("--no-sandbox");
             options.addArguments("--start-maximized");
             options.addArguments("--disable-dev-shm-usage");
-            options.setExperimentalOption("useAutomationExtension", false);
             driver= new ChromeDriver(options);
         }else{
             System.out.println("This is not valid browser, please enter valid browser names - firefox or chrome");
