@@ -1,6 +1,7 @@
 package com.maersk.eggtimer.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,7 +26,7 @@ public class BasePage {
         }else if(browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--no-sandbox"); //Bypass OS security model
+            options.addArguments("--no-sandbox");
             options.addArguments("--start-maximized");
             options.addArguments("--disable-dev-shm-usage");
             driver= new ChromeDriver(options);

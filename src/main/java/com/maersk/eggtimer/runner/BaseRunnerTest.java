@@ -5,7 +5,6 @@ import com.maersk.eggtimer.utilities.BasePage;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
@@ -18,7 +17,7 @@ import org.junit.runner.RunWith;
 )
 
 public class BaseRunnerTest {
-    @After
+    @AfterClass
     public static void tearDown(){
         BasePage.tearDown();
     }
